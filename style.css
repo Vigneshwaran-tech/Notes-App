@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'poppins',sans-serif;
+    background-color: #f4f3ff;
+    display: flex;
+    justify-content: center;
+    padding: 40px 10px;
+}
+
+.app {
+    width: 100%;
+    max-width: 600px;
+}
+
+h1 {
+    text-align: center;
+    color: #4b0082;
+}
+
+.note-input {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+.note-input input,
+.note-input textarea {
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    resize: none;
+}
+
+.note-input textarea {
+    min-height: 100px;
+}
+
+.note-input button {
+    background-color: #8a2be2;
+    color: white;
+    padding: 12px;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.2 ease-in;
+}
+
+.note-input button:hover {
+    background-color: #6a1bbd;
+}
+
+.notes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 20px;
+}
+
+.note-card {
+    padding: 15px;
+    border-radius: 12px;
+    color: #333;
+    background-color: #fffacd;
+    position: relative;
+    word-wrap: break-word;
+}
+
+.note-card h3 {
+    margin: 0 0 10px;
+    font-size: 14px;
+}
+
+/*icons*/
+.note-card i {
+    position: absolute;
+    top: 10px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+
+.note-card i.fa-trash {
+    right: 10px;
+    color: crimson;
+}
+
+
+.note-card i.fa-pen {
+    right: 35px;
+    color: #333;
+}
+
+
+/* moblie enhancements*/
+@media (max-width:480px) {
+    body {
+        padding: 20px 8px;
+    }
+
+    h1 {
+        font-size: 24px;
+
+    }
+
+    .note-input input,
+    .note-input textarea {
+        font-size: 16px;
+    }
+
+    .note-input button {
+        font-size: 16px;
+        padding: 10px;
+    }
+
+    .note-card {
+        font-size: 15px;
+        padding: 12px;
+    }
+
+    .note-card h3 {
+        font-size: 16px;
+    }
+
+    .note-card i {
+        font-size: 14px;
+    }
+}
